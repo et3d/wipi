@@ -1,0 +1,42 @@
+
+    {{partial "head.html" .}}
+
+    {{partial "body1.html" .}}
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row card">
+
+        <div class="col s12 m4 card-image">
+            <div class="card">
+                <div class="card-image">
+                    <a href="/gh">
+                        <img src="images/sample-1.jpg">
+                        <span class="card-title">
+                            <h4><b>The greenhouse</b></h4>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{ range first 2 .Site.RegularPages }}
+        <div class="col s12 m4 card-image">
+          <div class="card">
+              <div class="card-image">
+                  <a href="{{.Permalink}}">
+                      <img src="/images/sample-1.jpg">
+                      <span class="card-title">
+                          <h4><b>{{.Data.Categories}} {{.Title}}</b></h4>
+                      </span>
+                  </a>
+              </div>
+          </div>
+        </div>
+        {{end}}
+    </div>
+  </div>
+  </div>
+
+  {{partial "body2.html" .}}
+  {{partial "footer.html" .}}

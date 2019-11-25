@@ -1,0 +1,1 @@
+Begonia is the most forgiving and beautiful plant ever made. Simply one noob gardener friend.

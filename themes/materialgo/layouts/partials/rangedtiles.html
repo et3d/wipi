@@ -1,0 +1,18 @@
+<div class="row">
+  {{$counter:=0}}
+  {{ range first 10 .Data.Pages }}
+    {{$counter = add $counter 1}}
+    <div class="col l3 tuile1 blue lighten-2">
+      {{$counter}}
+      {{if eq (len .Data.Pages) 1 }}
+          <a href="{{.Page.Permalink}}">
+      {{else}}
+          <a href="{{.Permalink}}">
+      {{end}}
+      {{.Page.Title}}
+      <svg  data-jdenticon-value="{{.Title}}"></svg>
+      </a>
+    </div>
+  {{ end }}
+  <br>
+</div>

@@ -1,0 +1,8 @@
+baseURL = "https://walipili.com"
+languageCode = "en"
+title = "green and growing stuff"
+theme ="materialgo"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""

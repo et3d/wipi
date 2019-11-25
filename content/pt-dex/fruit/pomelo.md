@@ -1,0 +1,1 @@
+Pomelo is easy to grow, it needs to be 30cm high to make fruits, assuming it is hot enough where it lives.

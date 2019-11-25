@@ -1,0 +1,27 @@
+<div class="row">
+  {{$counter:=0}}
+  {{$itm:=0}}
+  {{/*if (where .Site.RegularPages "Section" "==" "events")*/}}
+  {{/*//$itm = len .Data.Pages*/}}
+  {{$itm = len (where .Site.RegularPages "Section" "==" "events") }}
+  <p>Nombre de pages dans la catégorie : {{$itm}}.</p>
+  {{ range first 10 .Data.Pages }}
+    {{$counter = add $counter 1}}
+    <div class="col s12 m4 card-image">
+      <div class="card">
+          <div class="card-image">
+              <a href="{{.Permalink}}">
+                  <img src="/images/sample-1.jpg">
+                  <span class="card-title">
+                      <h5><b>{{.Data.Categories}} {{.Title}} dans la catégorie {{.Description}}<br>Date {{.Date.Format "2006-01-02"}}</b></h5>
+                  </span>
+              </a>
+          </div>
+      </div>
+    </div>
+
+  {{ end }}
+ 
+  {{$itm = 0}}
+  <br>
+</div>
